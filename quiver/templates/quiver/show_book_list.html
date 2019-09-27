@@ -1,0 +1,16 @@
+{% if book.notebooks %}
+    <h3 class="page-header">笔记本</h3>
+{% endif %}
+
+<ul class="list-group">
+    {% for notebook in book.notebooks %}
+        <li class="list-group-item">
+            <a href="{% url 'quiver:book_detail' notebook.uuid %}">
+                <span class="text-primary lead">{{ notebook.name }}</span>
+                <span class="text-muted">{{ notebook.uuid }}</span>
+                <span class="badge">{{ notebook.notebooks|length }}</span>
+            </a>
+            <span class="badge">{{ notebook.notes|length }}</span>
+        </li>
+    {% endfor %}
+</ul>

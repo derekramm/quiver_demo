@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <a href="{% url 'quiver:book_detail' note.book.uuid %}" class="btn btn-default btn-block">上一级</a>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>{{ note.title }}</h3>
+        </div>
+        <div class="panel-body">
+            {% for cell in note.cells %}
+                <p>
+                    {% autoescape off %}
+                        {{ cell.data }}
+                    {% endautoescape %}
+                </p>
+            {% endfor %}
+
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

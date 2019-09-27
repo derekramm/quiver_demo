@@ -1,0 +1,24 @@
+{
+  "children" : [
+    {
+      "uuid" : "Tutorial"
+    },
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "uuid" : "904C17B6-346D-411B-A026-BDA1AAA3DFDD"
+            },
+            {
+              "uuid" : "A5553B86-4D33-48CF-9322-94AC467CA214"
+            }
+          ],
+          "uuid" : "FDF0B05D-F9DA-4FC6-BACE-191C47B2212B"
+        }
+      ],
+      "uuid" : "0AE8BAE4-F6E6-440F-A4AE-843499416FA7"
+    }
+  ],
+  "uuid" : "Notebooks"
+}
